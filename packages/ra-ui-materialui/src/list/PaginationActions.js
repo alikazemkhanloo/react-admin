@@ -126,7 +126,7 @@ function PaginationActions(props) {
                     onClick={prevPage}
                     className="previous-page"
                 >
-                    <ChevronLeft />
+                    {theme.direction === "rtl" ? <ChevronRight /> : <ChevronLeft />}
                     {translate('ra.navigation.prev')}
                 </Button>
             )}
@@ -140,7 +140,7 @@ function PaginationActions(props) {
                     className="next-page"
                 >
                     {translate('ra.navigation.next')}
-                    <ChevronRight />
+                    {theme.direction === "rtl" ? <ChevronLeft /> : <ChevronRight />}
                 </Button>
             )}
         </div>
